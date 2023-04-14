@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  width: 100%;
+  min-height: 40px;
+  background-color: #262626;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  gap: 8px 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 200px;
+}
+
+.buttonHeaderGroup {
+  display: flex;
+  gap: 15px;
+}
+
+.buttonHeader {
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16;
+}
+
+.buttonHeader:hover {
+  border-color: white;
+  transition: 0.7s;
+}
+
+.sectionTitle {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sectionDescription {
+  text-align: center;
+  color: #383838;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainContent sideBarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainContent;
+}
+
+.categoryCard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.sportCenter {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  border: 5px solid transparent;
+}
+
+.categoryCard:hover {
+  border-color: black;
+}
+
+.sidebarCardTitle {
+  text-align: center;
+  padding: 10px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sideBarContent {
+  padding: 20px;
+  background-color: #383838;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sideBarContent;
+  gap: 20px;
+}
+
+.sidebarCard {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.sportSidebar {
+  width: 100%;
+  border-radius: 10px;
+  border: 5px solid transparent;
+}
+
+.sidebarCard:hover {
+  border-color: gainsboro;
+}
+
+.mainCategoryCadeTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+
+.mainCategoryCadeDescription {
+  padding: 6px;
+}
+
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background-color: #262626;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  gap: 8px 15px;
+  flex-wrap: wrap;
+}
+
+.footerArchor {
+  text-decoration: none;
+  color: white;
+}
+
+.footerArchor:hover {
+  color: red;
+  transition: 0.7s;
+}
+
+@media (max-width: 630px) {
+  .gridContainer {
+    grid-template-areas:
+      "mainContent"
+      "sideBarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sideBarContent {
+    min-width: auto;
+  }
+  .footerArchor {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
